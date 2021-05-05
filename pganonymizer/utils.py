@@ -36,7 +36,8 @@ def anonymize_tables(connection, definitions, verbose=False):
         column_dict = get_column_dict(columns)
         primary_key = table_definition.get('primary_key', DEFAULT_PRIMARY_KEY)
         total_count = get_table_count(connection, table_name)
-        data, table_columns = build_data(connection, table_name, columns, excludes, search_condition, total_count, verbose)
+        data, table_columns = build_data(connection, table_name, columns, excludes, search_condition, total_count,
+                                         verbose)
         import_data(connection, column_dict, table_name, table_columns, primary_key, data)
 
 
