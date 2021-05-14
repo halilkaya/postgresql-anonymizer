@@ -4,7 +4,7 @@ from hashlib import md5
 from faker import Faker
 from six import with_metaclass
 
-from pganonymizer.exceptions import InvalidProvider, InvalidProviderArgument
+from exceptions import InvalidProvider, InvalidProviderArgument
 
 PROVIDERS = []
 
